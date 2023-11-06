@@ -32,7 +32,7 @@ export default function InvoicesBillsWidget() {
             <AddLayer title="30 days summary" className="pb-24" />
             <Row className="pb-8">
               <Col span={12}>
-                <h5 className="regular">Today’s balance</h5>
+                2<h5 className="regular">Today’s balance</h5>
               </Col>
               <Col span={12} className="text-align-right">
                 <h5 className="semibold">1030,00</h5>
@@ -63,7 +63,7 @@ export default function InvoicesBillsWidget() {
           </Card>
         </Col>
         <Col span={16}>
-          <LineSeries />
+          <LineSeries chartdiv="chartdiv" />
         </Col>
       </Row>
     </WidgetLayout>

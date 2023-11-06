@@ -143,8 +143,17 @@
 }
 
 //4
+.ml-4 {
+  margin-left: 4px;
+}
+.mt-4 {
+  margin-top: 4px;
+}
 .mr-4 {
   margin-right: 4px;
+}
+.mb-4 {
+  margin-bottom: 4px;
 }
 
 //6
@@ -226,6 +235,19 @@
   margin-bottom: 24px;
 }
 
+// 27
+.mt-27 {
+  margin-top: 27px;
+}
+
+// 28
+.mt-28 {
+  margin-top: 28px;
+}
+.mb-28 {
+  margin-bottom: 28px !important;
+}
+
 // 32
 .ml-32 {
   margin-left: 32px;
@@ -238,6 +260,20 @@
 }
 .mb-32 {
   margin-bottom: 32px;
+}
+
+// 48
+.ml-48 {
+  margin-left: 48px;
+}
+.mt-48 {
+  margin-top: 48px;
+}
+.mr-48 {
+  margin-right: 48px;
+}
+.mb-48 {
+  margin-bottom: 48px;
 }
 
 /* -------------------------------- Font Style -------------------------------- */
@@ -282,7 +318,26 @@
 // 56
 .h-56 {
   height: 56px;
-  background-color: red;
+}
+
+//80
+.h-80 {
+  height: 80px !important;
+}
+
+//160
+.h-160 {
+  height: 160px !important;
+}
+
+//160
+.h-245 {
+  height: 245px !important;
+}
+
+//300
+.h-300 {
+  height: 300px !important;
 }
 
 /* -------------------------------- Position -------------------------------- */
@@ -305,6 +360,11 @@
   align-items: baseline;
 }
 
+.align-items-end {
+  display: flex;
+  align-items: flex-end;
+}
+
 // content alignment
 .justify-content-between {
   display: flex;
@@ -314,4 +374,9 @@
 .justify-content-center {
   display: flex;
   justify-content: center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
 }

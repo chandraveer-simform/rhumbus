@@ -6,14 +6,14 @@ import { FileTextFilled, CaretDownOutlined } from "@ant-design/icons";
 import PageHeader from "@/app/(dashboard)/_component/pageHeader/pageHeader";
 import Select from "@/component/select/page";
 import Button from "@/component/button/page";
-import SearchInput from "@/component/searchInput/Page";
 import Table from "@/component/table/page";
 
-import "./billsToPay.scss";
+import "./invoices.scss";
 import Pagination from "@/component/pagination/page";
 
 interface DataType {
   key: string;
+  number: string;
   ref?: string;
   to?: string;
   date?: Date | string;
@@ -24,6 +24,12 @@ interface DataType {
 }
 
 const columns: ColumnsType<DataType> = [
+  {
+    title: <span className="paragraph2 medium">Number</span>,
+    dataIndex: "number",
+    key: "number",
+    render: (text) => <h5>{text}</h5>,
+  },
   {
     title: <span className="paragraph2 medium">Ref</span>,
     dataIndex: "ref",
@@ -77,6 +83,7 @@ const columns: ColumnsType<DataType> = [
 const data: DataType[] = [
   {
     key: "1",
+    number: "INV-0012",
     ref: "P/O CRM08-12",
     to: "PowerDirect",
     date: "25 Oct 2021",
@@ -87,6 +94,7 @@ const data: DataType[] = [
   },
   {
     key: "2",
+    number: "INV-0012",
     ref: "",
     to: "Net Connect",
     date: "16 March 2021",
@@ -97,6 +105,7 @@ const data: DataType[] = [
   },
   {
     key: "3",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -107,6 +116,7 @@ const data: DataType[] = [
   },
   {
     key: "4",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -117,6 +127,7 @@ const data: DataType[] = [
   },
   {
     key: "5",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -127,6 +138,7 @@ const data: DataType[] = [
   },
   {
     key: "6",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -137,6 +149,7 @@ const data: DataType[] = [
   },
   {
     key: "7",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -147,6 +160,7 @@ const data: DataType[] = [
   },
   {
     key: "8",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -157,6 +171,7 @@ const data: DataType[] = [
   },
   {
     key: "9",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -167,6 +182,7 @@ const data: DataType[] = [
   },
   {
     key: "10",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -177,6 +193,7 @@ const data: DataType[] = [
   },
   {
     key: "11",
+    number: "INV-0012",
     ref: "P/O 9711",
     to: "Kreakita Furniture",
     date: "04 Aug 2021",
@@ -190,11 +207,19 @@ const data: DataType[] = [
 export const typesOptions = [
   {
     value: "1",
-    label: "By type",
+    label: "All",
   },
   {
     value: "2",
-    label: "2 Period",
+    label: "Today",
+  },
+  {
+    value: "3",
+    label: "Weekly",
+  },
+  {
+    value: "4",
+    label: "Monthly",
   },
 ];
 
@@ -209,17 +234,16 @@ const itemRender: PaginationProps["itemRender"] = (
   return originalElement;
 };
 
-export default function billsToPay() {
+export default function Invoices() {
   return (
-    <div className="bills-to-pay-page">
-      {/* Bills to pay header */}
+    <div className="invoices-page">
+      {/* Invoices header */}
       <Row className="pb-32">
         <Col span={24}>
           <PageHeader
-            title="Bills to pay"
+            title="Invoices"
             pageHeaderRight={
               <div className="bills-to-pay-header ">
-                <SearchInput className="page-header-search-input w-240" />
                 <Select
                   className="h-40 ml-8 mr-8  "
                   placeholder="Search to Select"
@@ -228,9 +252,17 @@ export default function billsToPay() {
                   defaultValue="1"
                   style={{ width: 140 }}
                 />
-
-                <Button className="semibold update-button ml-8" type="primary">
-                  New Bill
+                <Button className="mr-14" type="default">
+                  Send Statements
+                </Button>
+                <Button className="mr-14" type="default">
+                  Export
+                </Button>
+                <Button className="mr-14" type="default">
+                  New Import
+                </Button>
+                <Button className="semibold ml-8" type="primary">
+                  New Import
                 </Button>
               </div>
             }

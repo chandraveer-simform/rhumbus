@@ -61,13 +61,17 @@ h4 {
 }
 
 /* Headline/H5 */
-h5 {
+.h5 {
   color: $dark-1-dark;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   line-height: normal;
+}
+
+h5 {
+  @extend .h5;
 }
 
 /* Headline/H6 */

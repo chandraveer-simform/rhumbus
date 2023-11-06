@@ -24,7 +24,7 @@ export default function MainHeader() {
       </Col>
       <Col span={12} className="row main-header-right ">
         <Button onClick={() => {}} className="add-button mr-14">
-          <PlusOutlined />
+          <PlusOutlined className="icon-properties" />
           Add
         </Button>
         <div className="ml-8 mr-8">

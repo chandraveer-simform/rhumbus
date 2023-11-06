@@ -31,7 +31,7 @@ const items: MenuItem[] = [
     getMenuItem("Cast Flow", "cashflow"),
   ]),
   getMenuItem("Sales", "sub4", <PoundCircleFilled className="large-icon" />, [
-    getMenuItem("Sales ", "sales"),
+    getMenuItem("Invoices ", "invoices"),
   ]),
   getMenuItem("Transactions", "sub5", <GiftFilled className="large-icon" />, [
     getMenuItem("Bills to pay", "billsToPay"),

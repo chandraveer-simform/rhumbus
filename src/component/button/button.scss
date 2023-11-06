@@ -16,6 +16,13 @@
   @extend .antd-btn, .ant-btn;
 }
 
+.ant-btn-default {
+  @extend .antd-btn, .ant-btn;
+  height: 40px;
+  border-color: $primary-color !important;
+  color: $primary-color !important;
+}
+
 .ant-btn-default:hover {
   border-color: $primary-color !important;
   color: $primary-color !important;

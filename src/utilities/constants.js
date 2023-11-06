@@ -24,5 +24,6 @@ export const dateFormat = "DD MMMM YYYY";
 
 export const IconsColor = {
   primaryColor: "#775da6",
+  secondaryColor: "#70b6c1",
   dark6Dark: "#898989",
 };

@@ -4,14 +4,10 @@ import { ColumnsType } from "antd/es/table";
 
 export default function Table({
   className = "",
-  columns = [],
-  dataSource = [],
   rowClassName,
   ...rest
 }: {
   className?: string;
-  columns: ColumnsType<[]>;
-  dataSource: [];
   rowClassName: (record: any, index: number) => string;
   [rest: string]: any;
 }) {
@@ -20,8 +16,6 @@ export default function Table({
     <AntdTable
       className={`ant-table ${className}`}
       rowClassName={rowClassName}
-      columns={columns}
-      dataSource={dataSource}
       {...rest}
     />
   );

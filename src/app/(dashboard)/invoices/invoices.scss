@@ -1,0 +1,11 @@
+@import "../../../style/variables";
+.invoices-page {
+  .back-arrow {
+    margin-left: -10px !important;
+  }
+
+  .bills-to-pay-header {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
