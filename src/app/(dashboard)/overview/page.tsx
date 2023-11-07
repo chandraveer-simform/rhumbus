@@ -299,7 +299,11 @@ export default function CashFlow() {
                 <span className="primary-color bottom">Reconcile 23 items</span>
               </Col>
               <Col span={16} className="align-items-end mt-27  h-160 ">
-                <LineSeries chartdiv="chartdiv" />
+                <LineSeries
+                  chartdiv="chartdiv"
+                  seriesStrokeColor={IconsColor.primaryColor}
+                  seriesFillColor={IconsColor.primaryColorLight}
+                />
               </Col>
             </Row>
           </WidgetLayout>
@@ -391,7 +395,7 @@ export default function CashFlow() {
                   chartdiv="business-saving-account"
                   className=" "
                   seriesStrokeColor={IconsColor.secondaryColor}
-                  seriesFillColor={IconsColor.secondaryColor}
+                  seriesFillColor={IconsColor.secondaryColorLight}
                 />
               </Col>
             </Row>

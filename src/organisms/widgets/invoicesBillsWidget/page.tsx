@@ -4,7 +4,11 @@ import Select from "@/component/select/page";
 import Card from "@/component/card/page";
 import { Col, Row } from "antd";
 import AddLayer from "../_component/addLayer/page";
-import { backOptions, dayOptions } from "../../../utilities/constants";
+import {
+  IconsColor,
+  backOptions,
+  dayOptions,
+} from "../../../utilities/constants";
 
 export default function InvoicesBillsWidget() {
   return (
@@ -63,7 +67,11 @@ export default function InvoicesBillsWidget() {
           </Card>
         </Col>
         <Col span={16}>
-          <LineSeries chartdiv="chartdiv" />
+          <LineSeries
+            chartdiv="chartdiv"
+            seriesStrokeColor={IconsColor.primaryColor}
+            seriesFillColor={IconsColor.primaryColorLight}
+          />
         </Col>
       </Row>
     </WidgetLayout>
