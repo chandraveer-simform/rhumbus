@@ -27,8 +27,9 @@ interface RendererPropertiesInterface {
 }
 
 // Renderer Grid Properties
-interface GridInterface {
+export interface GridInterface {
   forceHidden?: boolean; // grid hidden
+  minGridDistance?: number;
 }
 
 interface LabelsInterface {

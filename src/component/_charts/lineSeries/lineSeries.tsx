@@ -1,20 +1,30 @@
 "use client";
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import { IconsColor } from "@/utilities/constants";
+import { GridInterface } from "../columnSeries/columnSeries";
 
 export default function LineSeries({
   chartdiv = "chartdiv",
   className = "",
   seriesStrokeColor = IconsColor.primaryColor,
   seriesFillColor = IconsColor.primaryColor,
+  xGridProperty = {
+    forceHidden: true, // grid line hidden
+    minGridDistance: 20,
+  },
+  yGridProperty = {
+    forceHidden: true, // grid line hidden
+  },
 }: {
   chartdiv: string;
   className?: string;
   seriesStrokeColor?: string;
   seriesFillColor?: string;
+  xGridProperty?: GridInterface;
+  yGridProperty?: GridInterface;
 }) {
   // Generate random data
   let date = new Date();
@@ -55,19 +65,31 @@ export default function LineSeries({
     var data = generateDatas(20);
 
     // Craete Y-axis
+    let yRenderer = am5xy.AxisRendererY.new(root, {});
+
+    yRenderer.grid.template.setAll({
+      ...yGridProperty,
+    });
+
     var yAxis = chart.yAxes.push(
       am5xy.ValueAxis.new(root, {
-        renderer: am5xy.AxisRendererY.new(root, {}),
+        renderer: yRenderer,
       })
     );
 
     // Create X-Axis
+    let xRenderer = am5xy.AxisRendererX.new(root, {
+      ...xGridProperty,
+    });
+
+    xRenderer.grid.template.setAll({
+      ...xGridProperty,
+    });
+
     var xAxis = chart.xAxes.push(
       am5xy.DateAxis.new(root, {
         baseInterval: { timeUnit: "day", count: 1 },
-        renderer: am5xy.AxisRendererX.new(root, {
-          minGridDistance: 20,
-        }),
+        renderer: xRenderer,
       })
     );
 

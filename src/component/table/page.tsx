@@ -8,7 +8,7 @@ export default function Table({
   ...rest
 }: {
   className?: string;
-  rowClassName: (record: any, index: number) => string;
+  rowClassName?: (record: any, index: number) => string;
   [rest: string]: any;
 }) {
   console.log(rowClassName);

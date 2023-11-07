@@ -9,6 +9,7 @@ interface PageHeaderRightInterface {
   textClass?: string;
   className?: string;
   pageHeaderRight?: React.ReactNode;
+  pageHeaderRightClassName?: string;
 }
 
 export default function PageHeader({
@@ -17,6 +18,7 @@ export default function PageHeader({
   textClass = "",
   className = "",
   pageHeaderRight,
+  pageHeaderRightClassName = "",
 }: PageHeaderRightInterface) {
   return (
     <Row className={`page-header ${className}`}>
@@ -24,7 +26,7 @@ export default function PageHeader({
         <h1>{title} </h1>
         <h5 className={`regular ${textClass}`}>{text}</h5>
       </Col>
-      <Col>{pageHeaderRight}</Col>
+      <Col className={pageHeaderRightClassName}>{pageHeaderRight}</Col>
     </Row>
   );
 }

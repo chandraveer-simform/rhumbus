@@ -1,0 +1,13 @@
+@import "../../style/variables";
+
+.antdSwitch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .ant-switch {
+    background-color: $dark-6-dark !important;
+    &-checked {
+      background-color: $primary-color !important;
+    }
+  }
+}

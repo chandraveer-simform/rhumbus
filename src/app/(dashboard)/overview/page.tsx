@@ -1,11 +1,7 @@
 "use client";
 import PageHeader from "../_component/pageHeader/pageHeader";
 import { Col, Row } from "antd";
-import {
-  MoreOutlined,
-  CheckCircleOutlined,
-  CheckCircleFilled,
-} from "@ant-design/icons";
+import { MoreOutlined, CheckCircleFilled } from "@ant-design/icons";
 import WidgetLayout from "@/organisms/widgets/layout";
 import WidgetHeader from "@/organisms/widgets/_component/widgetHeader/page";
 import Statistic from "@/component/statistic/page";
@@ -16,6 +12,16 @@ import AmericanBankLogo from "../../../assets/img/american-bank-logo.png";
 import ColumnSeries from "@/component/_charts/columnSeries/columnSeries";
 import { IconsColor } from "@/utilities/constants";
 import "./overview.scss";
+import Table from "@/component/table/page";
+import { ColumnsType } from "antd/es/table";
+import Switch from "@/component/switch/page";
+
+interface DataType {
+  key: string;
+  account: string;
+  thisMonth: number | string;
+  ytd: number | string;
+}
 
 export default function CashFlow() {
   const businessPerformanceDataA = [
@@ -169,18 +175,92 @@ export default function CashFlow() {
     },
   ];
 
+  // Account Watch list
+  const AccountWatchlistData = [
+    {
+      id: 1,
+      value: "2,190.99",
+      text: "4 invoices for Marin BC and 2 other contacts.",
+      buttonName: "Add expected dates",
+    },
+    {
+      id: 2,
+      value: "3,190.99",
+      text: "4 invoices for Marin BC and 2 other contacts.",
+      buttonName: "Add expected dates",
+    },
+  ];
+
+  const columns: ColumnsType<DataType> = [
+    {
+      title: <span className="paragraph2 medium">Account</span>,
+      dataIndex: "account",
+      key: "account",
+      render: (text) => <h5>{text}</h5>,
+      align: "left",
+    },
+    {
+      title: <span className="paragraph2 medium">This Month</span>,
+      dataIndex: "thisMonth",
+      key: "this",
+      render: (text) => <h5 className="semibold">{text}</h5>,
+      align: "right",
+    },
+    {
+      title: <span className="paragraph2 medium">YTD</span>,
+      dataIndex: "ytd",
+      key: "ytd",
+      render: (text) => <h5 className="semibold">{text}</h5>,
+      align: "right",
+    },
+  ];
+
+  const data: DataType[] = [
+    {
+      key: "1",
+      account: "Entertainment (600)",
+      thisMonth: "2,500,00",
+      ytd: "10,453.75",
+    },
+    {
+      key: "2",
+      account: "Advertising (620)",
+      thisMonth: "0.00",
+      ytd: "53.60",
+    },
+    {
+      key: "3",
+      account: "Inventory (140)",
+      thisMonth: "0.00",
+      ytd: "0.00",
+    },
+    {
+      key: "3",
+      account: "Sales (400)",
+      thisMonth: "7,654.10",
+      ytd: "29,250.85",
+    },
+  ];
+
   return (
     <>
-      <Row className="pb-32">
-        <Col>
+      <Row className="pb-32" justify={"space-between"}>
+        <Col span={12}>
           <PageHeader
             title="Hi, Katie"
             text="Here’s what’s going on with Lajou Cafe finance"
+            className=""
             textClass="dark-6-dark"
           />
         </Col>
-        <Col>
-          <span></span>
+        <Col span={2}>
+          <Switch
+            className="bottom"
+            switchClassName="ml-12"
+            beforeText="Private"
+            defaultChecked
+            onChange={() => {}}
+          />
         </Col>
       </Row>
 
@@ -219,12 +299,12 @@ export default function CashFlow() {
                 <span className="primary-color bottom">Reconcile 23 items</span>
               </Col>
               <Col span={16} className="align-items-end mt-27  h-160 ">
-                <LineSeries chartdiv="chartdiv" className=" " />
+                <LineSeries chartdiv="chartdiv" />
               </Col>
             </Row>
-            <Row></Row>
           </WidgetLayout>
         </Col>
+
         {/* Business Performance */}
         <Col span={12}>
           <WidgetLayout>
@@ -391,7 +471,7 @@ export default function CashFlow() {
                 titleTopClass="h5 dark-1-dark semibold"
               />
             </Col>
-            <Col span={24} className="widget-content h-245">
+            <Col span={24} className="widget-content h-150">
               <ColumnSeries
                 chartdiv="invoice-owed-to-you"
                 categoryField="month"
@@ -410,6 +490,23 @@ export default function CashFlow() {
                 ]}
                 // xAxisVisible={false}
                 yAxesVisible={false}
+              />
+            </Col>
+          </WidgetLayout>
+        </Col>
+
+        {/* Account Watchlist */}
+        <Col span={12}>
+          <WidgetLayout>
+            <WidgetHeader title="Account Watchlist" className="mb-32" />
+            <Col span={24} className="h-185 p-0 m-0">
+              <Table
+                columns={columns}
+                dataSource={data}
+                className="w-100 widget-table bg-dark-6-white "
+                rowClassName={() => "bg-dark-6-white rm-td-border"}
+                pagination={false}
+                bordered={false}
               />
             </Col>
           </WidgetLayout>
