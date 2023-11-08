@@ -175,22 +175,6 @@ export default function CashFlow() {
     },
   ];
 
-  // Account Watch list
-  const AccountWatchlistData = [
-    {
-      id: 1,
-      value: "2,190.99",
-      text: "4 invoices for Marin BC and 2 other contacts.",
-      buttonName: "Add expected dates",
-    },
-    {
-      id: 2,
-      value: "3,190.99",
-      text: "4 invoices for Marin BC and 2 other contacts.",
-      buttonName: "Add expected dates",
-    },
-  ];
-
   const columns: ColumnsType<DataType> = [
     {
       title: <span className="paragraph2 medium">Account</span>,
@@ -249,7 +233,6 @@ export default function CashFlow() {
           <PageHeader
             title="Hi, Katie"
             text="Here’s what’s going on with Lajou Cafe finance"
-            className=""
             textClass="dark-6-dark"
           />
         </Col>
@@ -264,7 +247,7 @@ export default function CashFlow() {
         </Col>
       </Row>
 
-      <Row className="pt-6" gutter={[12, 12]}>
+      <Row gutter={[12, 12]}>
         {/* Business Bank Account */}
         <Col span={12}>
           <WidgetLayout>
@@ -298,7 +281,7 @@ export default function CashFlow() {
                 </div>
                 <span className="primary-color bottom">Reconcile 23 items</span>
               </Col>
-              <Col span={16} className="align-items-end mt-27  h-160 ">
+              <Col span={16} className="align-items-end mt-27 h-160 ">
                 <LineSeries
                   chartdiv="chartdiv"
                   seriesStrokeColor={IconsColor.primaryColor}

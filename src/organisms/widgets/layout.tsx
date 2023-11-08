@@ -1,5 +1,4 @@
 "use client";
-
 import "./layout.scss";
 import Card from "@/component/card/page";
 

@@ -76,3 +76,21 @@ a.njs-link {
 .njs-link:hover {
   color: $primary-color;
 }
+
+// anchor tag disabled
+.a-disabled {
+  a {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: $dark-1-dark;
+  }
+}
+
+a {
+  color: $dark-1-dark;
+}
+
+a:hover {
+  color: $primary-color;
+}

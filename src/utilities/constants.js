@@ -20,6 +20,17 @@ export const dayOptions = [
   },
 ];
 
+export const accountType = [
+  {
+    value: "1",
+    label: "Manage Account",
+  },
+  {
+    value: "2",
+    label: "Delete Account",
+  },
+];
+
 export const dateFormat = "DD MMMM YYYY";
 
 export const IconsColor = {
