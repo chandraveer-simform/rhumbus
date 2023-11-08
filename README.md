@@ -19,6 +19,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Pages
+
 / - Home page
   /- Cash Flow
   /- Expenses
@@ -28,8 +29,21 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ### Home Page
 ![Screenshot from 2023-10-13 13-32-28](https://github.com/chandraveer-simform/rhumbus/assets/65344767/0cb9bd84-fc22-4109-b53a-be94f3ad3b8a)
 
+### Overview
+/ - Overview
+
+![Screenshot from 2023-11-08 16-47-45](https://github.com/chandraveer-simform/rhumbus/assets/65344767/50c3aad0-a49c-4854-8599-1d6c982d4e79)
+![Screenshot from 2023-11-08 16-48-16](https://github.com/chandraveer-simform/rhumbus/assets/65344767/7be7b1cf-92f0-4edd-852d-eb90d326c6d7)
+
+### Bank Accounts
+/- Overview 
+  /- Bank Accounts
+
+![Screenshot from 2023-11-08 17-14-56](https://github.com/chandraveer-simform/rhumbus/assets/65344767/88ba37d6-9c54-4664-991c-5a027ee28958)
+
+
 ### Cash Flow
-![Screenshot from 2023-10-13 13-34-55](https://github.com/chandraveer-simform/rhumbus/assets/65344767/5253c4c2-b2ca-47c0-a258-4bb5634523b6)
+![Screenshot from 2023-11-08 17-17-15](https://github.com/chandraveer-simform/rhumbus/assets/65344767/7eb69916-543f-48c5-aed4-2134016bc660)
 
 ### Expenses
 ![Screenshot from 2023-10-13 13-35-28](https://github.com/chandraveer-simform/rhumbus/assets/65344767/670b88bf-63c3-42a5-9fe8-dd81bc6f0c5a)
