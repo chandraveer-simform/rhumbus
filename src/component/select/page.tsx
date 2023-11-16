@@ -7,7 +7,7 @@ export default function Select({
   placeholder,
   style,
   options,
-  defaultValue,
+  defaultValue = "",
   bordered,
   suffixIcon,
   onChange,
@@ -19,7 +19,7 @@ export default function Select({
   style?: object;
   options: Array<T>;
   bordered?: boolean;
-  defaultValue?: string | number | boolean;
+  defaultValue?: any;
   suffixIcon?: React.ReactNode;
   onChange?: (value: string[]) => void;
   rest?: Object;

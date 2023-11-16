@@ -35,7 +35,7 @@ $box-shadow-1: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
 }
 
 .dark-1-dark {
-  color: $dark-1-dark;
+  color: $dark-1-dark !important;
 }
 .dark-2-dark {
   color: $dark-2-dark;
@@ -43,9 +43,16 @@ $box-shadow-1: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
 .dark-3-dark {
   color: $dark-3-dark;
 }
+.dark-6-dark {
+  color: $dark-6-dark;
+}
 
 .bg-dark-5-dark {
   background: $dark-5-dark;
+}
+
+.bg-dark-6-white {
+  background-color: $dark-6-white !important;
 }
 
 .secondary-color {

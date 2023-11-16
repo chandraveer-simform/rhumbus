@@ -1,0 +1,12 @@
+@import "../../../../style/variables";
+@import "../../../../style/typography";
+.widget-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .right-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

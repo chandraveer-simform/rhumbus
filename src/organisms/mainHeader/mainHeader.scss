@@ -16,8 +16,13 @@
   border-style: none;
 }
 
-.add-button {
+.add-button.ant-btn-default {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  // ant-btn-default
+  height: 32px !important;
+  color: $dark-1-dark !important;
+  border-color: $line-1-line !important;
 }

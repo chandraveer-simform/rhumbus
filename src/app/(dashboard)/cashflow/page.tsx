@@ -5,6 +5,7 @@ import InvoicesBillsWidget from "@/organisms/widgets/invoicesBillsWidget/page";
 import DataCollapseWidget from "@/organisms/widgets/dataCollapseWidget/page";
 import Button from "@/component/button/page";
 import ListDataWidget from "@/organisms/widgets/listDataWidget/page";
+import Link from "next/link";
 
 const data = [
   {
@@ -59,9 +60,9 @@ export default function CashFlow() {
                 </div>
                 <div className="item-footer">
                   <h5 className="semibold">{value}</h5>
-                  <Button type="link" className="medium">
+                  <Link href="" className="medium">
                     {buttonName}
-                  </Button>
+                  </Link>
                 </div>
               </List.Item>
             )}

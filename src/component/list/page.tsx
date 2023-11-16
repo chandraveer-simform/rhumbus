@@ -1,7 +1,6 @@
 import { List as AntdList } from "antd";
-
-import "./list.scss";
 import { ListGridType, ListItemLayout, ListSize } from "antd/es/list";
+import "./list.scss";
 
 export interface ListInterface {
   bordered?: boolean;

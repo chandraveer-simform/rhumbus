@@ -1,28 +1,31 @@
 "use client";
-
 import { Col, Row } from "antd";
 import "./pageHeader.scss";
 
 interface PageHeaderRightInterface {
-  title: String;
-  text?: String;
-  className?: any;
-  pageHeaderRight?: any;
+  title: string;
+  text?: string;
+  textClass?: string;
+  className?: string;
+  pageHeaderRight?: React.ReactNode;
+  pageHeaderRightClassName?: string;
 }
 
 export default function PageHeader({
   title,
   text,
-  className,
+  textClass = "",
+  className = "",
   pageHeaderRight,
+  pageHeaderRightClassName = "",
 }: PageHeaderRightInterface) {
   return (
     <Row className={`page-header ${className}`}>
       <Col>
         <h1>{title} </h1>
-        <h5 className="regular">{text}</h5>
+        <h5 className={`regular ${textClass}`}>{text}</h5>
       </Col>
-      <Col>{pageHeaderRight}</Col>
+      <Col className={pageHeaderRightClassName}>{pageHeaderRight}</Col>
     </Row>
   );
 }

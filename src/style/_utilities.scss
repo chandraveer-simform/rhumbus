@@ -3,6 +3,11 @@
   border-style: solid;
 }
 
+.border-top {
+  @extend .border-properties;
+  border-top-width: 1px;
+}
+
 .border-right {
   @extend .border-properties;
   border-right-width: 1px;
@@ -28,7 +33,7 @@
 
 /* -------------------------------- Padding -------------------------------- */
 .p-0 {
-  padding: 0px;
+  padding: 0px !important;
 }
 // 5
 .p-5 {
@@ -98,13 +103,21 @@
 .pb-24 {
   padding-bottom: 24px;
 }
-//28
 
+//28
 .pl-28 {
   padding-left: 28px;
 }
 .pr-28 {
   padding-right: 28px;
+}
+
+//30
+.pl-30 {
+  padding-left: 30px;
+}
+.pr-30 {
+  padding-right: 30px;
 }
 
 // 32
@@ -139,12 +152,21 @@
 
 /* -------------------------------- Margin -------------------------------- */
 .m-0 {
-  margin: 0px;
+  margin: 0px !important;
 }
 
 //4
+.ml-4 {
+  margin-left: 4px;
+}
+.mt-4 {
+  margin-top: 4px;
+}
 .mr-4 {
   margin-right: 4px;
+}
+.mb-4 {
+  margin-bottom: 4px;
 }
 
 //6
@@ -203,6 +225,9 @@
 .mt-16 {
   margin-top: 16px;
 }
+.mr-16 {
+  margin-right: 16px;
+}
 .mb-16 {
   margin-bottom: 16px;
 }
@@ -226,6 +251,19 @@
   margin-bottom: 24px;
 }
 
+// 27
+.mt-27 {
+  margin-top: 27px;
+}
+
+// 28
+.mt-28 {
+  margin-top: 28px;
+}
+.mb-28 {
+  margin-bottom: 28px !important;
+}
+
 // 32
 .ml-32 {
   margin-left: 32px;
@@ -238,6 +276,20 @@
 }
 .mb-32 {
   margin-bottom: 32px;
+}
+
+// 48
+.ml-48 {
+  margin-left: 48px;
+}
+.mt-48 {
+  margin-top: 48px;
+}
+.mr-48 {
+  margin-right: 48px;
+}
+.mb-48 {
+  margin-bottom: 48px;
 }
 
 /* -------------------------------- Font Style -------------------------------- */
@@ -282,15 +334,58 @@
 // 56
 .h-56 {
   height: 56px;
-  background-color: red;
+}
+
+// 70
+.h-70 {
+  height: 70px;
+}
+
+//80
+.h-80 {
+  height: 80px !important;
+}
+
+//150
+.h-150 {
+  height: 150px !important;
+}
+
+//160
+.h-160 {
+  height: 160px !important;
+}
+
+//185
+.h-185 {
+  height: 185px !important;
+}
+
+//245
+.h-245 {
+  height: 245px !important;
+}
+
+//300
+.h-300 {
+  height: 300px !important;
 }
 
 /* -------------------------------- Position -------------------------------- */
 
 .sticky-bottom {
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
 }
 
 /* -------------------------------- Align -Justify -------------------------------- */
@@ -303,6 +398,11 @@
 .align-items-baseline {
   display: flex;
   align-items: baseline;
+}
+
+.align-items-end {
+  display: flex;
+  align-items: flex-end;
 }
 
 // content alignment

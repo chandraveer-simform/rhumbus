@@ -1,13 +1,34 @@
 "use client";
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
+import { IconsColor } from "@/utilities/constants";
+import { GridInterface } from "../columnSeries/columnSeries";
 
-export default function LineSeries() {
+export default function LineSeries({
+  chartdiv = "chartdiv",
+  className = "",
+  seriesStrokeColor = IconsColor.primaryColor,
+  seriesFillColor = IconsColor.primaryColor,
+  xGridProperty = {
+    forceHidden: true, // grid line hidden
+    minGridDistance: 20,
+  },
+  yGridProperty = {
+    forceHidden: true, // grid line hidden
+  },
+}: {
+  chartdiv: string;
+  className?: string;
+  seriesStrokeColor?: string;
+  seriesFillColor?: string;
+  xGridProperty?: GridInterface;
+  yGridProperty?: GridInterface;
+}) {
   useLayoutEffect(() => {
     // Create root and chart
-    var root = am5.Root.new("chartdiv");
+    var root = am5.Root.new(chartdiv);
 
     root.setThemes([am5themes_Animated.new(root)]);
 
@@ -19,48 +40,56 @@ export default function LineSeries() {
       })
     );
 
-    // Define data
-    var data = [
-      {
-        date: new Date(2021, 2, 2).getTime(),
-        value: 1800,
-      },
-      {
-        date: new Date(2021, 2, 3).getTime(),
-        value: 800,
-      },
-      {
-        date: new Date(2021, 2, 8).getTime(),
-        // value is missing
-      },
-      {
-        date: new Date(2021, 2, 13).getTime(),
-        value: 1200,
-      },
-      {
-        date: new Date(2021, 2, 15).getTime(),
-        value: 1000,
-      },
-      {
-        date: new Date(2021, 2, 16).getTime(),
-        value: 740,
-      },
-    ];
+    // Generate random data
+    var date = new Date();
+    date.setHours(0, 0, 0, 0);
+    var value = 100;
+
+    function generateData() {
+      value = Math.round(Math.random() * 10 - 5 + value);
+      am5.time.add(date, "day", 1);
+      return {
+        date: date.getTime(),
+        value: value,
+      };
+    }
+
+    function generateDatas(count: number) {
+      var data = [];
+      for (var i = 0; i < count; ++i) {
+        data.push(generateData());
+      }
+      return data;
+    }
+
+    var data = generateDatas(5);
 
     // Craete Y-axis
+    let yRenderer = am5xy.AxisRendererY.new(root, {});
+
+    yRenderer.grid.template.setAll({
+      ...yGridProperty,
+    });
+
     var yAxis = chart.yAxes.push(
       am5xy.ValueAxis.new(root, {
-        renderer: am5xy.AxisRendererY.new(root, {}),
+        renderer: yRenderer,
       })
     );
 
     // Create X-Axis
+    let xRenderer = am5xy.AxisRendererX.new(root, {
+      ...xGridProperty,
+    });
+
+    xRenderer.grid.template.setAll({
+      ...xGridProperty,
+    });
+
     var xAxis = chart.xAxes.push(
       am5xy.DateAxis.new(root, {
         baseInterval: { timeUnit: "day", count: 1 },
-        renderer: am5xy.AxisRendererX.new(root, {
-          minGridDistance: 20,
-        }),
+        renderer: xRenderer,
       })
     );
 
@@ -75,8 +104,8 @@ export default function LineSeries() {
           valueXField: "date",
           tension: 0.2,
           minDistance: 0,
-          stroke: am5.color("#775DA6"),
-          fill: am5.color("#775DA6"),
+          stroke: am5.color(seriesStrokeColor),
+          fill: am5.color(seriesFillColor),
         })
       );
       series.strokes.template.setAll({
@@ -98,8 +127,8 @@ export default function LineSeries() {
 
   return (
     <div
-      className="m-0 p-0"
-      id="chartdiv"
+      className={`m-0 p-0 ${className}`}
+      id={chartdiv}
       style={{ width: "100%", height: "100%" }}
     ></div>
   );

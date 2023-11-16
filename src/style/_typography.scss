@@ -16,8 +16,6 @@
 /* Headline/H1 */
 h1 {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Inter;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -27,8 +25,6 @@ h1 {
 /* Headline/H2 */
 h2 {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   line-height: normal;
@@ -38,8 +34,6 @@ h2 {
 /* Headline/H3 */
 h3 {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Inter;
   font-size: 18px;
   font-style: normal;
   line-height: 24px; /* 133.333% */
@@ -48,9 +42,6 @@ h3 {
 /* Headline/H4 */
 .h4 {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   line-height: normal;
@@ -61,20 +52,20 @@ h4 {
 }
 
 /* Headline/H5 */
-h5 {
+.h5 {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   line-height: normal;
 }
 
+h5 {
+  @extend .h5;
+}
+
 /* Headline/H6 */
 .h6 {
   color: $dark-3-dark;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Inter;
   font-size: 12px;
   font-style: normal;
   line-height: normal;
@@ -89,8 +80,6 @@ h6 {
 /* Number/Big number */
 .big-number {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Inter;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -100,9 +89,6 @@ h6 {
 /* Number/Medium number */
 .medium-number {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -112,9 +98,6 @@ h6 {
 /* Number/Small number */
 .small-number {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-
-  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -126,9 +109,6 @@ h6 {
 /* Paragraph/1-Paragraph */
 .paragraph1 {
   color: $dark-2-dark;
-  font-feature-settings: "clig" off, "liga" off;
-
-  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -148,8 +128,6 @@ p {
 /* Paragraph/3-Paragraph */
 .paragraph3 {
   color: $dark-1-dark;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

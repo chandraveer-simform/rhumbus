@@ -1,5 +1,4 @@
-import { Col, CollapseProps, Row } from "antd";
-
+import { CollapseProps } from "antd";
 import WidgetLayout from "../layout";
 import Select from "@/component/select/page";
 import AddLayer from "../_component/addLayer/page";

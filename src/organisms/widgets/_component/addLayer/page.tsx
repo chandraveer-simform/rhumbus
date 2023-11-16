@@ -2,7 +2,6 @@
 
 import { Col, Row } from "antd";
 import "./addLayer.scss";
-import { ReactElement } from "react";
 
 export default function AddLayer({
   title,

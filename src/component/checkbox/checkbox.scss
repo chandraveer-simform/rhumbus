@@ -1,0 +1,25 @@
+@import "../../style/variables";
+
+.ant-checkbox {
+  &-wrapper:hover {
+    border-color: $primary-color !important;
+  }
+
+  &-checked &-inner {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+  }
+}
+
+.ant-checkbox-24 {
+  .ant-checkbox-inner {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .ant-checkbox-inner::after {
+    transform: rotate(45deg) scale(1) translate(-70%, -60%);
+    width: 8px;
+    height: 15px;
+  }
+}

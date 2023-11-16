@@ -3,7 +3,6 @@ import { CaretDownOutlined } from "@ant-design/icons";
 
 import Select from "../select/page";
 import Link from "next/link";
-
 import "./pagination.scss";
 
 export const comparisonOptions = [
@@ -22,8 +21,8 @@ export const comparisonOptions = [
 ];
 
 export default function Pagination({
-  pageClassName,
-  className,
+  pageClassName = "",
+  className = "",
   total,
   itemRender,
   ...rest
