@@ -1,6 +1,6 @@
 import { Checkbox as AntdCheckbox } from "antd";
-
 import "./checkbox.scss";
+
 export default function Checkbox({
   children,
   className = "",

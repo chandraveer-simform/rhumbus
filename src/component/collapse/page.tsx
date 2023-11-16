@@ -1,8 +1,9 @@
 import type { CollapseProps } from "antd";
 import { Collapse as AntdCollapse } from "antd";
 import "./collapse.scss";
+
 export default function Collapse({
-  className,
+  className = "",
   items,
   bordered,
   defaultActiveKey,

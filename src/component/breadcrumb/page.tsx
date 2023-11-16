@@ -1,6 +1,6 @@
 import { Breadcrumb as AntdBreadcrumb } from "antd";
-
 import "./breadcrumb.scss";
+
 export default function Breadcrumb({
   separator,
   items,

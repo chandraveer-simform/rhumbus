@@ -283,7 +283,7 @@ export default function Invoices() {
             pagination={false}
           />
           <Pagination
-            pageClassName="pl-16 pr-16"
+            pageClassName="pl-16 pr-16 mt-16"
             total={500}
             itemRender={itemRender}
           />

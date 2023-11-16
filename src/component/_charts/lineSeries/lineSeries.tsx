@@ -26,28 +26,6 @@ export default function LineSeries({
   xGridProperty?: GridInterface;
   yGridProperty?: GridInterface;
 }) {
-  // Generate random data
-  let date = new Date();
-  date.setHours(0, 0, 0, 0);
-  let value = 100;
-
-  function generateData() {
-    value = Math.round(Math.random() * 10 - 5 + value);
-    am5.time.add(date, "day", 1);
-    return {
-      date: date.getTime(),
-      value: value,
-    };
-  }
-
-  function generateDatas(count: number) {
-    let data = [];
-    for (var i = 0; i < count; ++i) {
-      data.push(generateData());
-    }
-    return data;
-  }
-
   useLayoutEffect(() => {
     // Create root and chart
     var root = am5.Root.new(chartdiv);

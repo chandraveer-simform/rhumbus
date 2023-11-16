@@ -1,6 +1,5 @@
 import { Table as AntdTable } from "antd";
 import "./table.scss";
-import { ColumnsType } from "antd/es/table";
 
 export default function Table({
   className = "",

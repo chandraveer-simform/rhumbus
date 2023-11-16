@@ -1,6 +1,6 @@
 import { Tag as AntdTag } from "antd";
-
 import "./tag.scss";
+
 export default function Tag({
   children,
   className,

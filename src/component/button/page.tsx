@@ -1,9 +1,9 @@
 import { Button as AntdButton } from "antd";
-
 import "./button.scss";
+
 export default function Button({
   children,
-  className,
+  className = "",
   ...rest
 }: {
   children: React.ReactNode;

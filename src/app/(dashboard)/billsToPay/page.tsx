@@ -1,16 +1,16 @@
 "use client";
 import { Col, PaginationProps, Row } from "antd";
-import type { ColumnsType } from "antd/es/table";
-import { FileTextFilled, CaretDownOutlined } from "@ant-design/icons";
-
 import PageHeader from "@/app/(dashboard)/_component/pageHeader/pageHeader";
 import Select from "@/component/select/page";
 import Button from "@/component/button/page";
 import SearchInput from "@/component/searchInput/Page";
 import Table from "@/component/table/page";
+import Pagination from "@/component/pagination/page";
+
+import { FileTextFilled, CaretDownOutlined } from "@ant-design/icons";
+import type { ColumnsType } from "antd/es/table";
 
 import "./billsToPay.scss";
-import Pagination from "@/component/pagination/page";
 
 interface DataType {
   key: string;
@@ -251,7 +251,7 @@ export default function billsToPay() {
             pagination={false}
           />
           <Pagination
-            pageClassName="pl-16 pr-16"
+            pageClassName="pl-16 mt-16 pr-16"
             total={500}
             itemRender={itemRender}
           />

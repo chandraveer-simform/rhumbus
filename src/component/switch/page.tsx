@@ -1,6 +1,6 @@
 import { Switch as AntdSwitch } from "antd";
-
 import "./switch.scss";
+
 export default function Switch({
   beforeText,
   className = "",

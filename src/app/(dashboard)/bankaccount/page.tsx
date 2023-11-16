@@ -1,21 +1,18 @@
 "use client";
 import Image from "next/image";
-
 import { Col, Row } from "antd";
-import { UpOutlined, DownOutlined } from "@ant-design/icons";
 import PageHeader from "@/app/(dashboard)/_component/pageHeader/pageHeader";
 import WidgetLayout from "@/organisms/widgets/layout";
 import WidgetHeader from "@/organisms/widgets/_component/widgetHeader/page";
 import Statistic from "@/component/statistic/page";
 import LineSeries from "@/component/_charts/lineSeries/lineSeries";
-import Breadcrumb from "@/component/breadcrumb/page";
 import Select from "@/component/select/page";
 import Button from "@/component/button/page";
 import Checkbox from "@/component/checkbox/page";
 
+import { UpOutlined, DownOutlined } from "@ant-design/icons";
 import { IconsColor, accountType } from "@/utilities/constants";
 import ChaseLogo from "../../../assets/img/chase-logo.png";
-import "./bankAccount.scss";
 
 export const comparisonOptions = [
   {
@@ -31,26 +28,6 @@ export const comparisonOptions = [
 export default function BankAccount() {
   return (
     <div className="bankaccount-page">
-      {/* Breadcrumb */}
-      {/* <Row>
-        <Breadcrumb
-          separator={
-            <div className="back-arrow">
-              <LeftOutlined />
-            </div>
-          }
-          items={[
-            {
-              title: "",
-            },
-            {
-              title: "Reports",
-              href: "/reports",
-            },
-          ]}
-        />
-      </Row> */}
-
       {/* Bank Accounts header */}
       <Row className="pb-32">
         <Col span={24}>
@@ -176,7 +153,6 @@ export default function BankAccount() {
                 <span className="paragraph2 medium">
                   No transactions imported
                 </span>
-                {/* <span className="primary-color bottom">Reconcile 23 items</span> */}
               </Col>
               <Col span={21} className="mt-27 h-160 col align-items-center">
                 <h4 className="medium">No Transactions imported</h4>

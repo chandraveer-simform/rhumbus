@@ -1,6 +1,5 @@
-import LineSeries from "@/component/_charts/lineSeries/lineSeries";
 import WidgetLayout from "../layout";
-import { Col, Row } from "antd";
+import { Row } from "antd";
 import WidgetHeader from "../_component/widgetHeader/page";
 import React from "react";
 

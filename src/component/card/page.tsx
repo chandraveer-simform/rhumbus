@@ -1,8 +1,9 @@
 import { Card as AntdCard, CardProps } from "antd";
 import "./card.scss";
+
 export default function Card({
   children,
-  className,
+  className = "",
   title,
   bordered,
   ...rest

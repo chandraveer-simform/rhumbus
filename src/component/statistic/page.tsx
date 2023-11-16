@@ -1,5 +1,4 @@
 "use client";
-
 import { Col, Row } from "antd";
 import "./statistic.scss";
 
