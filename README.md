@@ -43,16 +43,35 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 
 ### Cash Flow
+/ - Business
+  / - Cash Flow
+  
 ![Screenshot from 2023-11-08 17-17-15](https://github.com/chandraveer-simform/rhumbus/assets/65344767/7eb69916-543f-48c5-aed4-2134016bc660)
 
-### Expenses
+### Invoices
+/ - Sales
+  / - Invoices
+  
+![Screenshot from 2023-11-16 14-01-40](https://github.com/chandraveer-simform/rhumbus/assets/65344767/4096b7f9-6101-4fb7-808e-e3cd74cab7bf)
+
+### Bills to pay
+/ - Transactions
+  / - Bills to pay
+  
+![Screenshot from 2023-11-16 14-04-40](https://github.com/chandraveer-simform/rhumbus/assets/65344767/7fd491cd-d5c3-4092-88e1-a3538781a222)
+
+### Expenses 
+
 ![Screenshot from 2023-10-13 13-35-28](https://github.com/chandraveer-simform/rhumbus/assets/65344767/670b88bf-63c3-42a5-9fe8-dd81bc6f0c5a)
 
 ### Reports
+
 ![Screenshot from 2023-10-13 13-35-55](https://github.com/chandraveer-simform/rhumbus/assets/65344767/7d6787e8-8713-42df-b984-95a72e6af8ef)
 
 ### Balance Sheet
-Reports -> Balance sheet
+/ - Reports
+  / - Balance Sheet 
+  
 ![Screenshot from 2023-10-13 13-36-39](https://github.com/chandraveer-simform/rhumbus/assets/65344767/41aa1457-01bd-4bee-bc2f-f6f5f11348c6)
 
 
